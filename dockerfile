@@ -1,3 +1,5 @@
+# Test 1
+
 # Use the official Nginx base image
 FROM nginx:latest
 
@@ -9,5 +11,3 @@ EXPOSE 80
 
 # Command to start Nginx when the container is run
 CMD ["nginx", "-g", "daemon off;"]
-
-
