@@ -41,5 +41,5 @@ jobs:
       # Build and push Docker image
       - name: Build and push Docker image
         run: |
-          docker build -t <dockerhubaccount>/<repository>:latest .
-          docker push <dockerhubaccount>/<repository>:latest
+          docker build -t dirkbraakman/pcc-k8s:latest .
+          docker push dirkbraakman/pcc-k8s:latest
