@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pcc-nginx
+spec:
+  replicas: 2  # Number of instances (pods) to run
+  selector:
+    matchLabels:
+      app: pcc-nginx
+# everything under template is the definition of the pod that will be created.      
+  template:
+    metadata:
+      labels:
+        app: pcc-nginx
+    spec:
+      containers:
+      - name: pcc-nginx
+        image: dirkbraakman/pcc-k8s:latest
+        ports:
+        - containerPort: 80
